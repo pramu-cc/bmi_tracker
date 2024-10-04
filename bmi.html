@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative BMI Tracker</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap" rel="stylesheet">
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="bmi/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Tracker</h1>
+
+        <!-- BMI Section -->
+        <div class="bmi-card">
+            <form id="bmiForm">
+                <input type="number" id="height" placeholder="Height (cm)" required>
+                <input type="number" id="weight" placeholder="Weight (kg)" required>
+                <input type="number" id="age" placeholder="Age" required>
+                <select id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <select id="activityLevel">
+                    <option value="low">Low Activity</option>
+                    <option value="moderate">Moderate Activity</option>
+                    <option value="high">High Activity</option>
+                </select>
+                <button type="button" onclick="calculateBMI()">Calculate BMI</button>
+            </form>
+            <p id="bmiResult"></p>
+            <div id="recommendations"></div>
+            <canvas id="bmiChart"></canvas>
+        </div>
+
+        <!-- Motivational Quotes -->
+        <div id="motivation">
+            <h2>Motivational Quote</h2>
+            <p>"The only bad workout is the one that didn't happen."</p>
+        </div>
+
+        <!-- Post Section -->
+        <div class="post-section">
+            <h2>Community Posts</h2>
+            <div id="communityPosts" class="posts-container">
+                <!-- Sample post card -->
+                <div class="post-card">
+                    <div class="post-header">
+                        <img src="avatar1.png" alt="Avatar" class="avatar">
+                        <div class="post-info">
+                            <span class="post-author">User1</span>
+                            <span class="post-time">2 hours ago</span>
+                        </div>
+                    </div>
+                    <p>“Lost 5 pounds this week! Feeling great!”</p>
+                    <div class="post-reactions">
+                        <button class="reaction-btn" onclick="reactToPost(this, '👍')">👍</button>
+                        <button class="reaction-btn" onclick="reactToPost(this, '❤️')">❤️</button>
+                        <button class="reaction-btn" onclick="reactToPost(this, '😆')">😆</button>
+                        <span class="reaction-count">3 Reactions</span>
+                    </div>
+                    <div class="comment-section">
+                        <input type="text" placeholder="Add a comment..." class="comment-input">
+                        <button class="comment-btn" onclick="addComment(this)">Comment</button>
+                    </div>
+                    <div class="comments-list">
+                        <p>User2: "Amazing progress!"</p>
+                        <p>User3: "Keep it up!"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Post Button -->
+            <button id="newPostBtn" onclick="openNewPostModal()">+ New Post</button>
+        </div>
+
+        <!-- New Post Modal -->
+        <div id="newPostModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeNewPostModal()">&times;</span>
+                <textarea id="newPostContent" placeholder="Share your experience..."></textarea>
+                <button onclick="addPost()">Post</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script for Chart.js and App Logic -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="bmi/scripts.js"></script>
+</body>
+</html>

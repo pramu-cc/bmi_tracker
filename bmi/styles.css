@@ -1,0 +1,297 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap');
+
+/* Body Styling */
+body {
+    background: linear-gradient(to right, rgba(255, 204, 128, 0.7), rgba(128, 255, 219, 0.7)),
+                url('https://example.com/path-to-image.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styling */
+.container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    width: 95%; /* Ensure the container fits well on smaller screens */
+}
+
+/* Heading */
+h1, h2 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* BMI Section */
+.bmi-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bmi-card input, .bmi-card select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.bmi-card button {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.bmi-card button:hover {
+    background-color: #1e8449;
+}
+
+#bmiResult, #recommendations {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+canvas {
+    width: 100% !important; /* Ensures the chart scales correctly */
+    height: auto;
+}
+
+/* Motivational Section */
+#motivation {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #2c3e50;
+}
+
+/* Post Section */
+.post-section {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 2px solid #ddd;
+}
+
+.posts-container {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.post-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-author {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.post-time {
+    font-size: 0.85em;
+    color: gray;
+}
+
+.post-reactions {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.reaction-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.reaction-count {
+    margin-left: 10px;
+    font-size: 0.9em;
+    color: gray;
+}
+
+.comment-section {
+    display: flex;
+    margin-top: 10px;
+}
+
+.comment-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comment-btn {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%; /* Adjusts modal width for smaller screens */
+    max-width: 400px;
+}
+
+.close-btn {
+    float: right;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Floating New Post Button */
+#newPostBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+}
+
+#newPostBtn:hover {
+    background-color: #2980b9;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    .bmi-card input, .bmi-card select {
+        padding: 8px;
+        font-size: 1em;
+    }
+
+    .bmi-card button {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .post-card {
+        padding: 15px;
+    }
+
+    .reaction-btn {
+        font-size: 1.2em;
+    }
+
+    .comment-input {
+        padding: 8px;
+    }
+
+    .comment-btn {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .modal-content {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    h1, h2 {
+        font-size: 1.3em;
+    }
+
+    .bmi-card input, .bmi-card select {
+        font-size: 0.9em;
+    }
+
+    .bmi-card button {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .reaction-btn {
+        font-size: 1em;
+    }
+
+    .comment-input {
+        font-size: 0.9em;
+    }
+
+    .comment-btn {
+        padding: 7px;
+    }
+
+    #newPostBtn {
+        padding: 12px;
+        font-size: 1.2em;
+    }
+}
