@@ -20,7 +20,7 @@ AI: Simple AI model for personalized recommendations (future potential for ML in
 Community: Interactive posting system with comments, reactions, and post engagement features
 Responsive Design: Ensures the app looks great on both desktop and mobile devices
 
-git clone https://github.com/your-username/bmi-tracker-ai.git
+git clone https://github.com/pramu-cc/bmi_tracker.git
 cd bmi-tracker-ai
 open index.html
 Usage
